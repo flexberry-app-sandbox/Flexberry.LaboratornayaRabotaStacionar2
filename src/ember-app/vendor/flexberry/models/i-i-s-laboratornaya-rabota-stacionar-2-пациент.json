@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISLaboratornaya_rabota_Stacionar_2Пациент",
+  "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-пациент",
+  "className": "Пациент",
+  "nameSpace": "IIS.Laboratornaya_rabota_Stacionar_2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "фио",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПациентE",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-пациент",
+      "attrs": [
+        {
+          "name": "фио",
+          "caption": "Фио",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ПациентL",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-пациент",
+      "attrs": [
+        {
+          "name": "фио",
+          "caption": "Фио",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-laboratornaya-rabota-stacionar-2-должность-e",
+  "editForm": "i-i-s-laboratornaya-rabota-stacionar-2-должность-e",
+  "external": false,
+  "caption": "Должность",
+  "name": "IISLaboratornaya_rabota_Stacionar_2ДолжностьL",
+  "className": "ДолжностьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-должность",
+      "modelProjection": "ДолжностьL"
+    }
+  ]
+}

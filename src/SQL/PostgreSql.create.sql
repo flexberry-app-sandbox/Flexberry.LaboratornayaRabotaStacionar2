@@ -1,0 +1,220 @@
+﻿
+
+
+
+
+CREATE TABLE СпрСотр (
+ primaryKey UUID NOT NULL,
+ Фио VARCHAR(255) NULL,
+ Должность UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ТчИтОтчПоБол (
+ primaryKey UUID NOT NULL,
+ ЛечПоФакт VARCHAR(255) NULL,
+ ЛеПоПлан VARCHAR(255) NULL,
+ Показатель VARCHAR(255) NULL,
+ ИтОтчПоБол UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Пациент (
+ primaryKey UUID NOT NULL,
+ Фио VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ОтПоОцЛечПац (
+ primaryKey UUID NOT NULL,
+ ДатаСозд TIMESTAMP(3) NULL,
+ Пациент UUID NOT NULL,
+ СпрСотр UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ТЧИтОтчПоЛет (
+ primaryKey UUID NOT NULL,
+ ПричЛет VARCHAR(255) NULL,
+ Число VARCHAR(255) NULL,
+ ИтОтчПоЛет UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Должность (
+ primaryKey UUID NOT NULL,
+ Наименование VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Диагноз (
+ primaryKey UUID NOT NULL,
+ Наименование VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ИтОтчПоБол (
+ primaryKey UUID NOT NULL,
+ Дата TIMESTAMP(3) NULL,
+ ПериодОт TIMESTAMP(3) NULL,
+ ПериодДо TIMESTAMP(3) NULL,
+ СпрСотр UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ТчОтчЛечПац (
+ primaryKey UUID NOT NULL,
+ ОцЛеч VARCHAR(255) NULL,
+ Рецептура VARCHAR(255) NULL,
+ Диагноз UUID NOT NULL,
+ ОтПоОцЛечПац UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ИтОтчПоЛет (
+ primaryKey UUID NOT NULL,
+ Дата TIMESTAMP(3) NULL,
+ ПериодОт TIMESTAMP(3) NULL,
+ ПериодДо TIMESTAMP(3) NULL,
+ Место VARCHAR(255) NULL,
+ СпрСотр UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMNETLOCKDATA (
+ LockKey VARCHAR(300) NOT NULL,
+ UserName VARCHAR(300) NOT NULL,
+ LockDate TIMESTAMP(3) NULL,
+ PRIMARY KEY (LockKey));
+
+
+CREATE TABLE STORMSETTINGS (
+ primaryKey UUID NOT NULL,
+ Module VARCHAR(1000) NULL,
+ Name VARCHAR(255) NULL,
+ Value TEXT NULL,
+ "User" VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMAdvLimit (
+ primaryKey UUID NOT NULL,
+ "User" VARCHAR(255) NULL,
+ Published BOOLEAN NULL,
+ Module VARCHAR(255) NULL,
+ Name VARCHAR(255) NULL,
+ Value TEXT NULL,
+ HotKeyData INT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERSETTING (
+ primaryKey UUID NOT NULL,
+ Name VARCHAR(255) NOT NULL,
+ DataObjectView VARCHAR(255) NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMWEBSEARCH (
+ primaryKey UUID NOT NULL,
+ Name VARCHAR(255) NOT NULL,
+ "Order" INT NOT NULL,
+ PresentView VARCHAR(255) NOT NULL,
+ DetailedView VARCHAR(255) NOT NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERDETAIL (
+ primaryKey UUID NOT NULL,
+ Caption VARCHAR(255) NOT NULL,
+ DataObjectView VARCHAR(255) NOT NULL,
+ ConnectMasterProp VARCHAR(255) NOT NULL,
+ OwnerConnectProp VARCHAR(255) NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERLOOKUP (
+ primaryKey UUID NOT NULL,
+ DataObjectType VARCHAR(255) NOT NULL,
+ Container VARCHAR(255) NULL,
+ ContainerTag VARCHAR(255) NULL,
+ FieldsToView VARCHAR(255) NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE UserSetting (
+ primaryKey UUID NOT NULL,
+ AppName VARCHAR(256) NULL,
+ UserName VARCHAR(512) NULL,
+ UserGuid UUID NULL,
+ ModuleName VARCHAR(1024) NULL,
+ ModuleGuid UUID NULL,
+ SettName VARCHAR(256) NULL,
+ SettGuid UUID NULL,
+ SettLastAccessTime TIMESTAMP(3) NULL,
+ StrVal VARCHAR(256) NULL,
+ TxtVal TEXT NULL,
+ IntVal INT NULL,
+ BoolVal BOOLEAN NULL,
+ GuidVal UUID NULL,
+ DecimalVal DECIMAL(20,10) NULL,
+ DateTimeVal TIMESTAMP(3) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ApplicationLog (
+ primaryKey UUID NOT NULL,
+ Category VARCHAR(64) NULL,
+ EventId INT NULL,
+ Priority INT NULL,
+ Severity VARCHAR(32) NULL,
+ Title VARCHAR(256) NULL,
+ Timestamp TIMESTAMP(3) NULL,
+ MachineName VARCHAR(32) NULL,
+ AppDomainName VARCHAR(512) NULL,
+ ProcessId VARCHAR(256) NULL,
+ ProcessName VARCHAR(512) NULL,
+ ThreadName VARCHAR(512) NULL,
+ Win32ThreadId VARCHAR(128) NULL,
+ Message VARCHAR(2500) NULL,
+ FormattedMessage TEXT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+
+ ALTER TABLE СпрСотр ADD CONSTRAINT FKbe29fc5faf6ab74145e14ce31f47c9c143da3eef FOREIGN KEY (Должность) REFERENCES Должность; 
+CREATE INDEX Indexbe29fc5faf6ab74145e14ce31f47c9c143da3eef on СпрСотр (Должность); 
+
+ ALTER TABLE ТчИтОтчПоБол ADD CONSTRAINT FK162b41a5515af74c187b627285addf73ae16fccd FOREIGN KEY (ИтОтчПоБол) REFERENCES ИтОтчПоБол; 
+CREATE INDEX Index162b41a5515af74c187b627285addf73ae16fccd on ТчИтОтчПоБол (ИтОтчПоБол); 
+
+ ALTER TABLE ОтПоОцЛечПац ADD CONSTRAINT FKed4ba1774990bc3ca4cd70ef6fe1d92daa89a987 FOREIGN KEY (Пациент) REFERENCES Пациент; 
+CREATE INDEX Indexed4ba1774990bc3ca4cd70ef6fe1d92daa89a987 on ОтПоОцЛечПац (Пациент); 
+
+ ALTER TABLE ОтПоОцЛечПац ADD CONSTRAINT FK5332d2187e60a1e625cf79c4ca86a58f99b1bfa7 FOREIGN KEY (СпрСотр) REFERENCES СпрСотр; 
+CREATE INDEX Index5332d2187e60a1e625cf79c4ca86a58f99b1bfa7 on ОтПоОцЛечПац (СпрСотр); 
+
+ ALTER TABLE ТЧИтОтчПоЛет ADD CONSTRAINT FK04153872dd3be2f41abd4a8b7ca72600926495b7 FOREIGN KEY (ИтОтчПоЛет) REFERENCES ИтОтчПоЛет; 
+CREATE INDEX Index04153872dd3be2f41abd4a8b7ca72600926495b7 on ТЧИтОтчПоЛет (ИтОтчПоЛет); 
+
+ ALTER TABLE ИтОтчПоБол ADD CONSTRAINT FKc7b43eff1e50331c19a7f66ae879ab6c15164cb8 FOREIGN KEY (СпрСотр) REFERENCES СпрСотр; 
+CREATE INDEX Indexc7b43eff1e50331c19a7f66ae879ab6c15164cb8 on ИтОтчПоБол (СпрСотр); 
+
+ ALTER TABLE ТчОтчЛечПац ADD CONSTRAINT FK0cb68422109d50bd8627ca0245cc34c7a00c8e4d FOREIGN KEY (Диагноз) REFERENCES Диагноз; 
+CREATE INDEX Index0cb68422109d50bd8627ca0245cc34c7a00c8e4d on ТчОтчЛечПац (Диагноз); 
+
+ ALTER TABLE ТчОтчЛечПац ADD CONSTRAINT FKbcf6b4f7a5656aaeb19cf8d477f05cda1882dc79 FOREIGN KEY (ОтПоОцЛечПац) REFERENCES ОтПоОцЛечПац; 
+CREATE INDEX Indexbcf6b4f7a5656aaeb19cf8d477f05cda1882dc79 on ТчОтчЛечПац (ОтПоОцЛечПац); 
+
+ ALTER TABLE ИтОтчПоЛет ADD CONSTRAINT FKfadd756668df387cfca6d2aa80583dd4dae3ae45 FOREIGN KEY (СпрСотр) REFERENCES СпрСотр; 
+CREATE INDEX Indexfadd756668df387cfca6d2aa80583dd4dae3ae45 on ИтОтчПоЛет (СпрСотр); 
+
+ ALTER TABLE STORMWEBSEARCH ADD CONSTRAINT FKc4378e39870eb056aec84088683297a01d2a6200 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+
+ ALTER TABLE STORMFILTERDETAIL ADD CONSTRAINT FK921d16269835017e2a0d0e29ad6fb175454a70d0 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+
+ ALTER TABLE STORMFILTERLOOKUP ADD CONSTRAINT FKce38ef0db3f01a53acaa49fed8853fb941ad47ba FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+

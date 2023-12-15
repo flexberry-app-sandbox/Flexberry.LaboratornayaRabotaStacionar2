@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISLaboratornaya_rabota_Stacionar_2Должность",
+  "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-должность",
+  "className": "Должность",
+  "nameSpace": "IIS.Laboratornaya_rabota_Stacionar_2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДолжностьE",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-должность",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Должность",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ДолжностьL",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-должность",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Должность",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

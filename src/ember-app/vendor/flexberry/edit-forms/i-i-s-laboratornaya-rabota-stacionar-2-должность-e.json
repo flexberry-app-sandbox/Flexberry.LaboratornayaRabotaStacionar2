@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Должность",
+  "name": "IISLaboratornaya_rabota_Stacionar_2ДолжностьE",
+  "className": "ДолжностьE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-должность",
+      "modelProjection": "ДолжностьE"
+    }
+  ]
+}

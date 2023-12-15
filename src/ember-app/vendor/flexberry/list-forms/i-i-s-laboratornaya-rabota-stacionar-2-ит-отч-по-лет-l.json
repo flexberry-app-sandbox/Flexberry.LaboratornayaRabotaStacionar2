@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e",
+  "editForm": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e",
+  "external": false,
+  "caption": "Итоговый отчет по летальности",
+  "name": "IISLaboratornaya_rabota_Stacionar_2ИтОтчПоЛетL",
+  "className": "ИтОтчПоЛетL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет",
+      "modelProjection": "ИтОтчПоЛетL"
+    }
+  ]
+}

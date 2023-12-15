@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "СпрСотр",
+      "projection": "СпрСотрL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Итоговый отчет по летальности",
+  "name": "IISLaboratornaya_rabota_Stacionar_2ИтОтчПоЛетE",
+  "className": "ИтОтчПоЛетE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет",
+      "modelProjection": "ИтОтчПоЛетE"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+import IISLaboratornaya_rabota_Stacionar_2ДиагнозEController from '../i-i-s-laboratornaya-rabota-stacionar-2-диагноз-e';
+
+var IISLaboratornaya_rabota_Stacionar_2ДиагнозENewController = IISLaboratornaya_rabota_Stacionar_2ДиагнозEController;
+export default IISLaboratornaya_rabota_Stacionar_2ДиагнозENewController;

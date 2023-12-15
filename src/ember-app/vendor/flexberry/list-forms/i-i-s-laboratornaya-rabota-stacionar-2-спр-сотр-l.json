@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр-e",
+  "editForm": "i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр-e",
+  "external": false,
+  "caption": "Сотрудник",
+  "name": "IISLaboratornaya_rabota_Stacionar_2СпрСотрL",
+  "className": "СпрСотрL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр",
+      "modelProjection": "СпрСотрL"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-бол-e",
+  "editForm": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-бол-e",
+  "external": false,
+  "caption": "Итоговый отчет по больным",
+  "name": "IISLaboratornaya_rabota_Stacionar_2ИтОтчПоБолL",
+  "className": "ИтОтчПоБолL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-бол",
+      "modelProjection": "ИтОтчПоБолL"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Диагноз",
+  "name": "IISLaboratornaya_rabota_Stacionar_2ДиагнозE",
+  "className": "ДиагнозE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-диагноз",
+      "modelProjection": "ДиагнозE"
+    }
+  ]
+}

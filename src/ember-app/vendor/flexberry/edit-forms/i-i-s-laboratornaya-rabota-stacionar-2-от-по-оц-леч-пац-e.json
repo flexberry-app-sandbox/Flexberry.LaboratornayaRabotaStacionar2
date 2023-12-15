@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "СпрСотр",
+      "projection": "СпрСотрL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Пациент",
+      "projection": "ПациентL",
+      "detailModelName": null
+    },
+    {
+      "master": "диагноз",
+      "displayAttributeName": "диагноз",
+      "required": true,
+      "relationName": "ТчОтчЛечПац.Диагноз",
+      "projection": "ДиагнозL",
+      "detailModelName": "i-i-s-laboratornaya-rabota-stacionar-2-тч-отч-леч-пац"
+    }
+  ],
+  "external": false,
+  "caption": "Отчет по оценке лечения пациента",
+  "name": "IISLaboratornaya_rabota_Stacionar_2ОтПоОцЛечПацE",
+  "className": "ОтПоОцЛечПацE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац",
+      "modelProjection": "ОтПоОцЛечПацE"
+    }
+  ]
+}

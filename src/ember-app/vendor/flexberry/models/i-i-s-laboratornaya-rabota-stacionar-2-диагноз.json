@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISLaboratornaya_rabota_Stacionar_2Диагноз",
+  "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-диагноз",
+  "className": "Диагноз",
+  "nameSpace": "IIS.Laboratornaya_rabota_Stacionar_2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДиагнозE",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-диагноз",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Диагноз",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ДиагнозL",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-диагноз",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Диагноз",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

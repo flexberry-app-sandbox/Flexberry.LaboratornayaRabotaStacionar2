@@ -1,0 +1,4 @@
+import IISLaboratornaya_rabota_Stacionar_2ДолжностьEController from '../i-i-s-laboratornaya-rabota-stacionar-2-должность-e';
+
+var IISLaboratornaya_rabota_Stacionar_2ДолжностьENewController = IISLaboratornaya_rabota_Stacionar_2ДолжностьEController;
+export default IISLaboratornaya_rabota_Stacionar_2ДолжностьENewController;

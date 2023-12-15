@@ -1,0 +1,78 @@
+﻿{
+  "name": "IISLaboratornaya_rabota_Stacionar_2ТчИтОтчПоБол",
+  "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-тч-ит-отч-по-бол",
+  "className": "ТчИтОтчПоБол",
+  "nameSpace": "IIS.Laboratornaya_rabota_Stacionar_2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "леПоПлан",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "лечПоФакт",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "показатель",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "итОтчПоБол",
+      "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-бол",
+      "inverse": "тчИтОтчПоБол"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТчИтОтчПоБолE",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-тч-ит-отч-по-бол",
+      "attrs": [
+        {
+          "name": "леПоПлан",
+          "caption": "Лечение по плану",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "лечПоФакт",
+          "caption": "Лечению по факту",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "показатель",
+          "caption": "Показатель",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

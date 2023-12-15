@@ -1,0 +1,64 @@
+﻿{
+  "applicationCaption": "Laboratornaya_rabota_ stacionar_2",
+  "applicationTitle": "Laboratornaya_rabota_ stacionar_2",
+  "items": [
+    {
+      "link": null,
+      "menuName": "стационар",
+      "caption": "Стационар",
+      "title": "Стационар",
+      "children": [
+        {
+          "link": "i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-laboratornaya-rabota-stacionar-2-пациент-l",
+          "menuName": null,
+          "caption": "Пациенты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац-l",
+          "menuName": null,
+          "caption": "Отчет по оценке лечения пациента",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-laboratornaya-rabota-stacionar-2-должность-l",
+          "menuName": null,
+          "caption": "Должность",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-laboratornaya-rabota-stacionar-2-диагноз-l",
+          "menuName": null,
+          "caption": "Диагноз",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-бол-l",
+          "menuName": null,
+          "caption": "Итоговый отчет по больным",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-l",
+          "menuName": null,
+          "caption": "Итоговый отчет по летальности",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

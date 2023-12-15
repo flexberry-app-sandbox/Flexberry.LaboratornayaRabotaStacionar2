@@ -1,0 +1,110 @@
+<h3 class="ui header">{{t "forms.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e.спрСотр-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.спрСотр
+      relationName="спрСотр"
+      projection="СпрСотрL"
+      title=(t "forms.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e.спрСотр-caption")
+      readonly=readonly
+      componentName="спрСотрLookup"
+      class=(if (v-get validationModel "спрСотр" "isInvalid") "error")
+      data-test-i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e-спрСотр=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "спрСотр" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.спрСотр.фио
+      class=(if (v-get validationModel.спрСотр "фио" "isInvalid") "error")
+      label=(t "forms.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e.спрСотр.фио-caption")
+      data-test-i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e-спрСотр-фио=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.спрСотр "фио" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e.периодОт-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.периодОт
+      class=(if (v-get validationModel "периодОт" "isInvalid") "error")
+      data-test-i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e-периодОт=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "периодОт" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e.периодДо-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.периодДо
+      class=(if (v-get validationModel "периодДо" "isInvalid") "error")
+      data-test-i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e-периодДо=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "периодДо" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.место
+      class=(if (v-get validationModel "место" "isInvalid") "error")
+      label=(t "forms.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e.место-caption")
+      data-test-i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e-место=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "место" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e.тЧИтОтчПоЛет-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="тЧИтОтчПоЛетGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.тЧИтОтчПоЛет
+      content=model.тЧИтОтчПоЛет
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "тЧИтОтчПоЛет" "isInvalid") "error")
+      data-test-i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-e-тЧИтОтчПоЛет=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тЧИтОтчПоЛет" "message")}}
+  </div>
+</form>

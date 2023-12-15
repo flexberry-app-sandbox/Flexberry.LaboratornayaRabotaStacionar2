@@ -1,0 +1,169 @@
+﻿{
+  "name": "IISLaboratornaya_rabota_Stacionar_2ОтПоОцЛечПац",
+  "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац",
+  "className": "ОтПоОцЛечПац",
+  "nameSpace": "IIS.Laboratornaya_rabota_Stacionar_2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаСозд",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "пациент",
+      "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-пациент",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "спрСотр",
+      "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "тчОтчЛечПац",
+      "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-тч-отч-леч-пац",
+      "inverse": "отПоОцЛечПац"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ОтПоОцЛечПацE",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац",
+      "attrs": [
+        {
+          "name": "датаСозд",
+          "caption": "Дата создания",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "СпрСотр",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фио",
+              "caption": "Фио сотрудника",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "default",
+          "caption": "Фио сотрудника",
+          "name": "спрСотр",
+          "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Пациент",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фио",
+              "caption": "Фио пациента",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "default",
+          "caption": "Фио пациента",
+          "name": "пациент",
+          "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-пациент",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ТчОтчЛечПацE",
+          "caption": "Табличная часть отчет по оценке лечения пациента",
+          "name": "тчОтчЛечПац",
+          "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-тч-отч-леч-пац",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ОтПоОцЛечПацL",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац",
+      "attrs": [
+        {
+          "name": "датаСозд",
+          "caption": "Дата создания",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "СпрСотр",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фио",
+              "caption": "Фио сотрудника",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фио сотрудника",
+          "name": "спрСотр",
+          "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Пациент",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фио",
+              "caption": "Фио пациента",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фио пациента",
+          "name": "пациент",
+          "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-пациент",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,92 @@
+﻿{
+  "name": "IISLaboratornaya_rabota_Stacionar_2ТчОтчЛечПац",
+  "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-тч-отч-леч-пац",
+  "className": "ТчОтчЛечПац",
+  "nameSpace": "IIS.Laboratornaya_rabota_Stacionar_2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "оцЛеч",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "рецептура",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "диагноз",
+      "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-диагноз",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "отПоОцЛечПац",
+      "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац",
+      "inverse": "тчОтчЛечПац"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТчОтчЛечПацE",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-тч-отч-леч-пац",
+      "attrs": [
+        {
+          "name": "оцЛеч",
+          "caption": "Оценка лечения",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "рецептура",
+          "caption": "Рецептура",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Диагноз",
+          "lookupValueField": "диагноз",
+          "relationName": "Диагноз",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Диагноз",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Диагноз",
+          "name": "диагноз",
+          "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-диагноз",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

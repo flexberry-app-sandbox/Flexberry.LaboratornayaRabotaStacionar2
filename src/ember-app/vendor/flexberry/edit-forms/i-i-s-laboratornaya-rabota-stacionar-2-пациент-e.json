@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Пациент",
+  "name": "IISLaboratornaya_rabota_Stacionar_2ПациентE",
+  "className": "ПациентE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-пациент",
+      "modelProjection": "ПациентE"
+    }
+  ]
+}

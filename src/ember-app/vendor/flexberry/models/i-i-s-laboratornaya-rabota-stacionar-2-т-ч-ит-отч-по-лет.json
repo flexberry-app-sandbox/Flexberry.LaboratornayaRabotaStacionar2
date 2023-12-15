@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISLaboratornaya_rabota_Stacionar_2ТЧИтОтчПоЛет",
+  "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-т-ч-ит-отч-по-лет",
+  "className": "ТЧИтОтчПоЛет",
+  "nameSpace": "IIS.Laboratornaya_rabota_Stacionar_2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "причЛет",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "число",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "итОтчПоЛет",
+      "relatedTo": "i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет",
+      "inverse": "тЧИтОтчПоЛет"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧИтОтчПоЛетE",
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-т-ч-ит-отч-по-лет",
+      "attrs": [
+        {
+          "name": "причЛет",
+          "caption": "Причина летальности",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "число",
+          "caption": "Число людей",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

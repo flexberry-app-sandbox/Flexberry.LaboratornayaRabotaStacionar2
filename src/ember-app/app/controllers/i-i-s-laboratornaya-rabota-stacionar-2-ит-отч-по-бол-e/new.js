@@ -1,0 +1,4 @@
+import IISLaboratornaya_rabota_Stacionar_2ИтОтчПоБолEController from '../i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-бол-e';
+
+var IISLaboratornaya_rabota_Stacionar_2ИтОтчПоБолENewController = IISLaboratornaya_rabota_Stacionar_2ИтОтчПоБолEController;
+export default IISLaboratornaya_rabota_Stacionar_2ИтОтчПоБолENewController;

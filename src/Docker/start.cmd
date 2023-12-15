@@ -1,0 +1,1 @@
+docker-compose -p laboratornaya_rabota_stacionar_2 up -d

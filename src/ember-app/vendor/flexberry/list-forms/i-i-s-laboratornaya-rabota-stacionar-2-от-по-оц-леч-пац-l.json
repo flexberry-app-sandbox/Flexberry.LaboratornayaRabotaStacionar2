@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац-e",
+  "editForm": "i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац-e",
+  "external": false,
+  "caption": "Отчет по оценке лечения пациента",
+  "name": "IISLaboratornaya_rabota_Stacionar_2ОтПоОцЛечПацL",
+  "className": "ОтПоОцЛечПацL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац",
+      "modelProjection": "ОтПоОцЛечПацL"
+    }
+  ]
+}
