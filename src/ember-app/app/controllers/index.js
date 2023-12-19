@@ -22,36 +22,36 @@ export default Controller.extend({
             link: 'i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр-l',
             caption: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр-l.caption'),
             title: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-спр-сотр-l.title'),
-            icon: 'edit',
             children: null
           }, {
             link: 'i-i-s-laboratornaya-rabota-stacionar-2-пациент-l',
             caption: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-пациент-l.caption'),
             title: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-пациент-l.title'),
-            icon: 'suitcase',
+            icon: 'list',
             children: null
           }, {
             link: 'i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац-l',
             caption: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац-l.caption'),
             title: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-от-по-оц-леч-пац-l.title'),
-            icon: 'archive',
+            icon: 'tasks',
             children: null
           }, {
             link: 'i-i-s-laboratornaya-rabota-stacionar-2-должность-l',
             caption: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-должность-l.caption'),
             title: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-должность-l.title'),
-            icon: 'table',
+            icon: 'file',
             children: null
           }, {
             link: 'i-i-s-laboratornaya-rabota-stacionar-2-диагноз-l',
             caption: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-диагноз-l.caption'),
             title: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-диагноз-l.title'),
+            icon: 'folder open',
             children: null
           }, {
             link: 'i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-бол-l',
             caption: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-бол-l.caption'),
             title: i18n.t('forms.application.sitemap.стационар.i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-бол-l.title'),
-            icon: 'file',
+            icon: 'book',
             children: null
           }, {
             link: 'i-i-s-laboratornaya-rabota-stacionar-2-ит-отч-по-лет-l',
